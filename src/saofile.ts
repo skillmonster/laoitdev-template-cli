@@ -13,16 +13,14 @@ import {
 } from "@Helper";
 import { ProjectPrompt } from "@Helper/lucky";
 import { formatFiles } from "@Helper/prettier";
-import Analytics from "analytics-node";
 import chalk from "chalk";
 import { exec } from "child_process";
 import path from "path";
 import { promisify } from "util";
-import { v4 as uuidv4 } from "uuid";
 import validate from "validate-npm-package-name";
 import { Action, GeneratorConfig } from "../@types/sao";
 
-const analytics = new Analytics(process.env.SEGMENT_KEY ?? "");
+// const analytics = new Analytics(process.env.SEGMENT_KEY ?? "");
 
 const saoConfig: GeneratorConfig = {
     prompts(sao) {
@@ -317,16 +315,17 @@ const saoConfig: GeneratorConfig = {
         if (!sao.opts.extras.apiMode) {
             const { telemetry } = await prompt_telemetry();
 
-            if (telemetry === "yes") {
-                analytics.track({
-                    event: "generate",
-                    properties: {
-                        ...sao.answers,
-                        type: sao.opts.extras.projectType,
-                    },
-                    anonymousId: uuidv4(),
-                });
-            }
+            /* Sending data to segment.io. */
+            // if (telemetry === "yes") {
+            // analytics.track({
+            //     event: "generate",
+            //     properties: {
+            //         ...sao.answers,
+            //         type: sao.opts.extras.projectType,
+            //     },
+            //     anonymousId: uuidv4(),
+            // });
+            // }
         }
 
         return actionsArray;
