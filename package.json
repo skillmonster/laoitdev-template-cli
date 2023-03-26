@@ -1,19 +1,19 @@
 {
-    "name": "superplate-cli",
+    "name": "laoitdev-react-cli",
     "version": "1.14.0",
     "description": "The frontend boilerplate with superpowers",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/pankod/superplate.git"
+        "url": "git+https://github.com/skillmonster/laoitdev-template-cli.git"
     },
     "bugs": {
-        "url": "https://github.com/pankod/superplate/issues"
+        "url": "https://github.com/skillmonster/laoitdev-template-cli/issues"
     },
-    "homepage": "https://pankod.github.io/superplate/",
+    "homepage": "https://github.com/skillmonster/laoitdev-template-cli/",
     "main": "lib/api.js",
     "bin": {
-        "superplate": "lib/index.js"
+        "skillmonster": "lib/index.js"
     },
     "files": [
         "lib",

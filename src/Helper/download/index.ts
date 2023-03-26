@@ -8,7 +8,7 @@ import { mkdirSync } from "temp";
 import { promisify } from "util";
 
 const pipeline = promisify(Stream.pipeline);
-const TEMP_PREFIX = "superplate-core-plugins.temp";
+const TEMP_PREFIX = "laoitdev-core-plugins.temp";
 
 export const DownloadHelper = {
     DownloadAndGetPath: async (

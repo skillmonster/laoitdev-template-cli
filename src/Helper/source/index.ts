@@ -27,8 +27,13 @@ export const get_source: GetSourceFn = async (source, branch, downloadType) => {
     );
     sourceSpinner.start();
 
+    // const sourcePath =
+    //     source ?? "https://github.com/pankod/superplate-core-plugins.git";
+
     const sourcePath =
-        source ?? "https://github.com/pankod/superplate-core-plugins.git";
+        "https://github.com/skillmonster/laoitdev-core-plugins.git";
+
+    console.log(sourcePath);
 
     const isPathExists = await FSHelper.IsPathExists(sourcePath);
     if (isPathExists) {

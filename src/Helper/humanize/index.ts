@@ -22,20 +22,6 @@ export const HumanizeChoices = {
                         "Creates a basic refine project (Recommended for CRUD applications)",
                     value: choice,
                 };
-            case "refine-nextjs":
-                return {
-                    title: "refine(Next.js)",
-                    description:
-                        "Creates a refine Next.js project with SSR support (Recommended for CRUD applications).",
-                    value: choice,
-                };
-            case "refine-remix":
-                return {
-                    title: "refine(Remix)",
-                    description:
-                        "Creates a refine Remix project with SSR support (Recommended for CRUD applications)",
-                    value: choice,
-                };
             default:
                 return {
                     title: choice,

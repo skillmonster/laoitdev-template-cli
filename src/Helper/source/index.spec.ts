@@ -21,7 +21,7 @@ describe("Source Helper", () => {
     it("correct source url", async () => {
         (promisify as any).mockImplementation(() => jest.fn());
 
-        const source = await get_source("superplate-core-plugins");
+        const source = await get_source("laoitdev-core-plugins");
         expect(source.error).toBe(undefined);
     });
 });
