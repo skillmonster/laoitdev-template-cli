@@ -3,23 +3,22 @@ export const HumanizeChoices = {
         choice: string,
     ): { title: string; description: string; value: string } => {
         switch (choice) {
-            case "react":
+            case "material-ui":
                 return {
-                    title: "React",
-                    description: "Creates a React CRA project",
+                    title: "Material-UI",
+                    description: "Creates a Material-UI project",
                     value: choice,
                 };
-            case "nextjs":
+            case "antd-ui":
                 return {
-                    title: "NextJS",
-                    description: "Creates a Next.js project",
+                    title: "Ant Design",
+                    description: "Creates a Ant Design project",
                     value: choice,
                 };
-            case "refine-react":
+            case "bootstrap-ui":
                 return {
-                    title: "refine(CRA)",
-                    description:
-                        "Creates a basic refine project (Recommended for CRUD applications)",
+                    title: "Bootstrap",
+                    description: "Creates a Bootstrap project",
                     value: choice,
                 };
             default:

@@ -33,8 +33,6 @@ export const get_source: GetSourceFn = async (source, branch, downloadType) => {
     const sourcePath =
         "https://github.com/skillmonster/laoitdev-core-plugins.git";
 
-    console.log(sourcePath);
-
     const isPathExists = await FSHelper.IsPathExists(sourcePath);
     if (isPathExists) {
         /**
